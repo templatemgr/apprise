@@ -123,9 +123,9 @@ SERVICE_UID="0" # set the user id
 SERVICE_GID="0" # set the group id
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # execute command variables - keep single quotes variables will be expanded later
-EXEC_CMD_BIN='apprise'                                                                                           # command to execute
-EXEC_CMD_ARGS='gunicorn -c $WWW_ROOT_DIR/gunicorn.conf.py -b :$SERVICE_PORT --worker-tmp-dir /dev/shm core.wsgi' # command arguments
-EXEC_PRE_SCRIPT=''                                                                                               # execute script before
+EXEC_CMD_BIN='gunicorn'                                                                                 # command to execute
+EXEC_CMD_ARGS='-c $WWW_ROOT_DIR/gunicorn.conf.py -b :$SERVICE_PORT --worker-tmp-dir /dev/shm core.wsgi' # command arguments
+EXEC_PRE_SCRIPT=''                                                                                      # execute script before
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Is this service a web server
 IS_WEB_SERVER="no"
