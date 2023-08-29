@@ -140,13 +140,11 @@ IS_DATABASE_SERVICE="no"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Additional variables
-APPRISE_CONFIG_DIR="$CONF_DIR"
-APPRISE_ATTACH_DIR="$DATA_DIR/attach"
-APPRISE_PLUGIN_PATHS="$DATA_DIR/plugin"
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Specifiy custom directories to be created
 ADD_APPLICATION_FILES=""
-ADD_APPLICATION_DIRS=""
+ADD_APPLICATION_DIRS="$DATA_DIR/attach $DATA_DIR/plugin"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 APPLICATION_FILES="$LOG_DIR/apprise.log"
 APPLICATION_DIRS="$RUN_DIR $ETC_DIR $CONF_DIR $LOG_DIR $TMP_DIR"
