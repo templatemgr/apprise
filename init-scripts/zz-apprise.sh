@@ -74,7 +74,7 @@ PRE_EXEC_MESSAGE=""
 DATABASE_DIR="${DATABASE_DIR_APPRISE:-/data/db/sqlite}"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Set webroot
-WWW_ROOT_DIR="/usr/share/apprise"
+WWW_ROOT_DIR="/usr/share/webapps/apprise"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Default predefined variables
 DATA_DIR="/data/apprise"   # set data directory
@@ -140,7 +140,9 @@ IS_DATABASE_SERVICE="no"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Additional variables
-
+APPRISE_CONFIG_DIR="$CONF_DIR"
+APPRISE_ATTACH_DIR="$DATA_DIR/attach"
+APPRISE_PLUGIN_PATHS="$DATA_DIR/plugin"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Specifiy custom directories to be created
 ADD_APPLICATION_FILES=""
@@ -153,7 +155,7 @@ APPLICATION_DIRS="$RUN_DIR $ETC_DIR $CONF_DIR $LOG_DIR $TMP_DIR"
 ADDITIONAL_CONFIG_DIRS=""
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # define variables that need to be loaded into the service - escape quotes - var=\"value\",other=\"test\"
-CMD_ENV=""
+CMD_ENV="APPRISE_CONFIG_DIR=$CONF_DIR APPRISE_ATTACH_DIR=$DATA_DIR/attach $DATA_DIR/plugin"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Overwrite based on file/directory
 
