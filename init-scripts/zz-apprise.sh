@@ -137,7 +137,7 @@ IS_WEB_SERVER="no"
 IS_DATABASE_SERVICE="no"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Load variables from config
-[ -f "$CONF_DIR/env/apprise.sh" ] && . "$CONF_DIR/env/apprise.sh"
+[ -f "/config/env/apprise.sh" ] && . "/config/env/apprise.sh"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Additional predefined variables
 
